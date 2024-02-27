@@ -1,0 +1,43 @@
+---
+import aboutImg from "@/assets/about-astro.png";
+import PageLayout from "@/layouts/Base.astro";
+import { Image } from "astro:assets";
+
+const meta = {
+	description: "I'm a starter theme for Astro.build",
+	title: "About",
+};
+---
+
+<PageLayout meta={meta}>
+	<div class="space-y-6">
+		<h1 class="title">About</h1>
+		<p>
+			Hi, I’m Kokou, a dedicated and passionate software engineer. With a strong background in
+			programming and problem-solving, I strive to create efficient and innovative software
+			solutions. As a software engineer, I specialize in developing high-quality applications,
+			designing robust software architectures, and implementing scalable solutions. I have
+			experience working with various programming languages, frameworks, and technologies, allowing
+			me to adapt to diverse project requirements.
+		</p>
+
+		<p>Techincal experience:</p>
+		<ul class="list-inside list-disc">
+			<li>Languages: Java, Python, C++, C, JavaScript, HTML, CSS, SQL, Bash</li>
+			<li>
+				Frameworks: Nextjs, React, Bootstrap, Tailwind, jQuery, Node.js, Electronjs, Javafx,
+				Express.js
+			</li>
+			<li>Databases: MySQL, MongoDB, SQLite</li>
+		</ul>
+		<!-- <p>
+			Clone or fork my <a
+				aria-label="github repository"
+				class="cactus-link inline-block"
+				href="https://github.com/chrismwilliams/astro-cactus"
+				rel="noopener noreferrer"
+				target="_blank">repo</a
+			> if you like me!
+		</p> -->
+	</div>
+</PageLayout>

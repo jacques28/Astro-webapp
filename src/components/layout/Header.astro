@@ -1,0 +1,139 @@
+---
+import { menuLinks } from "@/site-config";
+
+import Search from "../Search.astro";
+import ThemeToggle from "../ThemeToggle.astro";
+
+const url = new URL(Astro.request.url);
+---
+
+<header class="group relative mb-28 flex items-center sm:ps-[4.5rem]" id="main-header">
+	<div class="flex sm:flex-col">
+		<a
+			aria-current={url.pathname === "/" ? "page" : false}
+			class="inline-flex items-center grayscale hover:filter-none sm:relative sm:inline-block"
+			href="/"
+		>
+			<svg
+				aria-hidden="true"
+				class="me-3 h-10 w-6 sm:absolute sm:start-[-4.5rem] sm:me-0 sm:h-20 sm:w-12"
+				fill="none"
+				focusable="false"
+				viewBox="0 0 230 800"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<title>Logo</title>
+				<path
+					fill="#3B8E65"
+					d="M134 107h109v65l13-12 2-2a1594 1594 0 0 0 10-10l2-2 12-14c9-12 19-24 34-27h33l15 1 29 1v3l1 7c7 42 7 42-4 58-12 16-27 29-42 41-6 4-11 9-15 14l-11 10-11 10-2 2-2 2-2 2-1 4a793 793 0 0 1 64 63 424590760 424590760 0 0 1 18 18l2 2 2 2 2 1c2 4 2 7 2 10v11a3919 3919 0 0 1 0 18v20l-1 8-38 4h-3c-25 2-44-1-63-18a278 278 0 0 1-20-21l-25-30-1 65H134V107Z"
+				></path>
+				<path
+					fill="#F84931"
+					d="M331 139h2a1512 1512 0 0 1 27 0v11l-1 10-4 1-1 3h-2l-1 2-5 5-2 2-5 4-10 11c-5 6-9 12-16 16l-9 8-1 2h-3v2h-2v2h-2l-1 2-5 6-9 9-8 9-6 5-10 9c1 4 1 6 4 8l11 10 2 2a2615 2615 0 0 1 9 8l18 21 2 1a47 47 0 0 1 11 10 1246 1246 0 0 1 25 25c3 4 6 6 11 7 4 3 8 6 10 11v8l-1 3-1 8a209 209 0 0 1-19 1c-13 0-13 0-18-3l-6-8-4-4-4-5-2-1c-4-2-6-5-9-8-4-5-9-10-15-14l-7-7-6-5c-8-7-16-15-22-24l-7-5-4-4-4-4-7 1v2h-2l-1 2-3 4c-6 6-7 12-7 20v2a1495 1495 0 0 0-1 52v3c0 3 0 3-2 5h-41V140h41l1 6v10a5338 5338 0 0 1 0 37v59c4-1 5-3 7-6l10-11 3-3 3-3 2-2 8-6 4-5 6-7 1-2h2v-2l4-3 3-2 2-2 6-6h2v-2l4-3 9-10 1-1h2v-2l5-5 2-2 4-3 1-3h2l2-1 1-2 1-3 4-1 2-4 3-4 1-2 1-1h2v-2c4-3 7-2 12-2Z"
+				></path>
+				<path
+					fill="#B36043"
+					d="M167 140h41l1 6v10a5338 5338 0 0 1 0 37v59c4-1 5-3 7-6l10-11 3-3 3-3 2-2 8-6 4-5 6-7 1-2h2v-2l4-3 3-2 2-2 6-6 2 1-2 2-7 7-10 10-2 3c-1 4-4 6-6 9l-2 1-9 7-4 4-7 6h-2l-1 2-4 6-2 2c-2 2-2 2-7 2V142h-38v236h38v-73l8-4-3 7-1 10v2a702 702 0 0 0 0 11l-1 16a3500 3500 0 0 1 0 25v3c0 3 0 3-2 5h-41V140Z"
+				></path>
+				<path fill="#639071" d="M134 107h109v65l2 1-3 1v-66H135v304h107v-66h5l1 5-4-3-1 65H134V107Z"
+				></path>
+				<path
+					fill="#817251"
+					d="M331 139h2a1512 1512 0 0 1 27 0v11c0 6 0 6-2 10l-1 1-2-1 2-3 1-16-36 1v3h-3l-1 2-5 8-3 3-7 4-5 5-3 1-1 2c-1 4-3 4-6 6l2-4 3-3 2-2 4-3 1-3h2l2-1 1-2 1-3 4-1 2-4 3-4 1-2 1-1h2v-2c4-3 7-2 12-2Z"
+				></path>
+				<path
+					fill="#5F9374"
+					d="m349 105 15 1 29 1 1 7-2 2v-8l-83 1v3l-4 3-10 9-1 2h-2l-1 3-5 5-1 2c-3 3-5 5-10 5l2-3 6-7c19-25 36-28 66-26Z"
+				></path>
+				<path fill="#4E825E" d="m263 196 3 1-6 5 1-5 2-1Z"></path>
+			</svg>
+			<span class="text-xl font-bold sm:text-2xl">Kokou Jacques Adisou</span>
+		</a>
+		<nav
+			aria-label="Main menu"
+			class="absolute -inset-x-4 top-14 hidden flex-col items-end gap-y-4 rounded-md bg-bgColor/[.85] py-4 text-accent shadow backdrop-blur group-[.menu-open]:z-50 group-[.menu-open]:flex sm:static sm:z-auto sm:-ms-4 sm:mt-1 sm:flex sm:flex-row sm:items-center sm:divide-x sm:divide-dashed sm:divide-accent sm:rounded-none sm:bg-transparent sm:py-0 sm:shadow-none sm:backdrop-blur-none"
+			id="navigation-menu"
+		>
+			{
+				menuLinks.map((link) => (
+					<a
+						aria-current={url.pathname === link.path ? "page" : false}
+						class="px-4 py-4 sm:py-0 sm:hover:underline"
+						data-astro-prefetch
+						href={link.path}
+					>
+						{link.title}
+					</a>
+				))
+			}
+		</nav>
+	</div>
+	<Search />
+	<ThemeToggle />
+	<mobile-button>
+		<button
+			aria-expanded="false"
+			aria-haspopup="menu"
+			aria-label="Open main menu"
+			class="group relative ms-4 h-7 w-7 sm:invisible sm:hidden"
+			id="toggle-navigation-menu"
+			type="button"
+		>
+			<svg
+				aria-hidden="true"
+				class="absolute start-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 transition-all group-aria-expanded:scale-0 group-aria-expanded:opacity-0"
+				fill="none"
+				focusable="false"
+				id="line-svg"
+				stroke="currentColor"
+				stroke-width="1.5"
+				viewBox="0 0 20 50"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<path d="M3.75 9h16.5m-16.5 6.75h16.5" stroke-linecap="round" stroke-linejoin="round"
+				></path>
+			</svg>
+			<svg
+				aria-hidden="true"
+				class="absolute start-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 scale-0 text-accent opacity-0 transition-all group-aria-expanded:scale-100 group-aria-expanded:opacity-100"
+				class="text-accent"
+				fill="none"
+				focusable="false"
+				id="cross-svg"
+				stroke="currentColor"
+				stroke-width="1.5"
+				viewBox="0 0 20 50"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+			</svg>
+		</button>
+	</mobile-button>
+</header>
+
+<script>
+	import { toggleClass } from "@/utils";
+
+	class MobileNavBtn extends HTMLElement {
+		private headerEl: HTMLElement;
+		private menuOpen: boolean;
+		private mobileButtonEl: HTMLButtonElement;
+
+		toggleMobileMenu = () => {
+			toggleClass(this.headerEl, "menu-open");
+			this.menuOpen = !this.menuOpen;
+			this.mobileButtonEl.setAttribute("aria-expanded", this.menuOpen.toString());
+		};
+
+		constructor() {
+			super();
+			this.headerEl = document.getElementById("main-header")!;
+			this.mobileButtonEl = this.querySelector("button") as HTMLButtonElement;
+			this.menuOpen = false;
+
+			this.mobileButtonEl.addEventListener("click", this.toggleMobileMenu);
+		}
+	}
+
+	customElements.define("mobile-button", MobileNavBtn);
+</script>
