@@ -1,6 +1,6 @@
 ---
 title: "spotiyrec"
-description: "This post is an example of how to add a cover/hero image"
+description: "A web application akin to Spotify, offering personalized music recommendations by utilizing the Spotify API."
 publishDate: "04 July 2023"
 updatedDate: "14 August 2023"
 coverImage:

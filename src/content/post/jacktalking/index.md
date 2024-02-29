@@ -1,5 +1,5 @@
 ---
 title: "jacktalking.me"
-description: "This post describes the process of adding webmentions to your own site"
+description: "Personal blog discussing tech subject live on: [jacktalking.me]"
 publishDate: "11 Oct 2023"
 ---
