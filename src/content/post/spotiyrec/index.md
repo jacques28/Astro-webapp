@@ -8,3 +8,5 @@ coverImage:
   alt: "Astro build wallpaper"
 tags: ["test", "image"]
 ---
+
+A web application akin to Spotify, offering personalized music recommendations by utilizing the Spotify API.
