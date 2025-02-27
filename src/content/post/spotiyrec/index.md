@@ -1,12 +1,14 @@
 ---
-title: "spotiyrec"
-description: "A web application akin to Spotify, offering personalized music recommendations by utilizing the Spotify API."
+title: "stoicattitude"
+description: "A web application dedicated to Stoic philosophy, providing personalized content and insights to help users
+cultivate a stoic mindset"
 publishDate: "04 July 2023"
 updatedDate: "14 August 2023"
 coverImage:
-  src: "./cover.png"
+  src: "./logo.png"
   alt: "Astro build wallpaper"
 tags: ["test", "image"]
 ---
 
-A web application akin to Spotify, offering personalized music recommendations by utilizing the Spotify API.
+A web application dedicated to Stoic philosophy, providing personalized content and insights to help users
+cultivate a stoic mindset [stoicattitude.com](https://stoicattitude.com)
